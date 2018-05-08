@@ -38,6 +38,7 @@ public class AppConfiguration extends WebSecurityConfigurerAdapter {
 	  }
 	
 	private Filter ssoFilter() {
+		
 	  OAuth2ClientAuthenticationProcessingFilter facebookFilter = new OAuth2ClientAuthenticationProcessingFilter("/login/facebook");
 	  OAuth2RestTemplate facebookTemplate = new OAuth2RestTemplate(facebook(), oauth2ClientContext);
 	  facebookFilter.setRestTemplate(facebookTemplate);
